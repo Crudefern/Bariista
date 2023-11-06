@@ -13,9 +13,9 @@ TOPDIR ?= $(CURDIR)
 # APP_SHORTNAME sets the short name of the application
 # APP_AUTHOR sets the author of the application
 #-------------------------------------------------------------------------------
-APP_NAME		:= WUP Installer GX2
-APP_SHORTNAME	:= WUP Installer GX2
-APP_AUTHOR		:= dj_skual
+APP_NAME		:= Bariista
+APP_SHORTNAME	:= Bariista
+APP_AUTHOR		:= Crudefern
 
 include $(DEVKITPRO)/wut/share/wut_rules
 
@@ -30,7 +30,7 @@ include $(DEVKITPRO)/wut/share/wut_rules
 # TV_SPLASH is the image displayed during bootup on the TV, leave blank to use default rule
 # DRC_SPLASH is the image displayed during bootup on the DRC, leave blank to use default rule
 #-------------------------------------------------------------------------------
-TARGET			:= wup_installer_gx2
+TARGET			:= bariista
 BUILD			:= build
 SOURCES			:= src \
 						src/common \

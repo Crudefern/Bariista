@@ -1,4 +1,3 @@
-FROM wiiuenv/devkitppc:20220907
+FROM devkitpro/devkitppc:latest
 
 WORKDIR /app
-CMD make -j$(nproc)

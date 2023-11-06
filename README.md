@@ -14,8 +14,8 @@ Once the dependencies are installed just run `make` and use the resulting `.wuhb
 ### Dockerfile
 To build this application using docker, run the following commands:
 ```shell
-docker build . -t bariistabuilder
-docker run -it --rm -v ${PWD}:/app bariistabuilder
+docker build -t bariistabuilder .
+docker run -it --rm -v ${PWD}:/app bariistabuilder make -j$(nproc)
 ```
 
 You can then use the resulting `.wuhb` file.
