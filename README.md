@@ -1,5 +1,5 @@
 # Bariista
-This is a fork of WUP Installer GX2 which can be found [here](https://github.com/Fangal-Airbag/wup-installer-gx2/)
+This is a fork of the WUHB branch of WUP Installer GX2 which can be found [here](https://github.com/Fangal-Airbag/wup-installer-gx2/)
 
 ## Bulding
 
