@@ -18,6 +18,5 @@ extern "C" int Menu_Main(void)
 	log_printf("Main application stopped\n");
 	
 	Application::destroyInstance();
-	
 	return 0;
 }

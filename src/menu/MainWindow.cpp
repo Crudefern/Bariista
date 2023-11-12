@@ -30,8 +30,8 @@ MainWindow::MainWindow(int w, int h)
 	, splashImg(splashImgData)
 	, titleImgData(Resources::GetImageData("titleHeader.png"))
 	, titleImg(titleImgData)
-	, titleText("WUP Installer GX2")
-	, versionText(WUP_GX2_VERSION)
+	, titleText("Bariista")
+	, versionText(BARIISTA_VERSION)
 {
 	folderList = NULL;
 	installWindow = NULL;
