@@ -1,6 +1,6 @@
 #include "common/common.h"
 #include "utils/logger.h"
-#include "main.h"
+#include "Bariista_installer.h"
 #include <padscore/kpad.h>
 
 
@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 	WPADEnableURCC(1);
 	
 	log_init();
-	log_printf("\nStarting WUP Installer GX2 %s\n", WUP_GX2_VERSION);
+	log_printf("\nStarting Bariista %s\n", BARIISTA_VERSION);
 
 	//! *******************************************************************
 	//! *                        Call our Main                            *
@@ -24,7 +24,7 @@ int main(int argc, char** argv)
 	//! *******************************************************************
 	//! *                            Exit                                 *
 	//! *******************************************************************
-	log_printf("WUP Installer GX2 exit...\n");
+	log_printf("Bariista exit...\n");
 	log_deinit();
 
 	return 0;

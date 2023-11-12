@@ -7,7 +7,7 @@ extern "C" {
 #endif
 
 	//! C wrapper for our C++ functions
-	int Menu_Main(void);
+	int Bariista_installer(void);
 
 #ifdef __cplusplus
 }

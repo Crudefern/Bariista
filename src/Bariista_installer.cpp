@@ -2,7 +2,7 @@
 #include "Application.h"
 #include "system/memory.h"
 
-extern "C" int Menu_Main(void)
+extern "C" int Bariista_installer(void)
 {
 	//!*******************************************************************
 	//!                    Initialize heap memory                        *
