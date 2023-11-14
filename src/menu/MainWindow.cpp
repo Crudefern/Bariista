@@ -219,7 +219,7 @@ void MainWindow::SetDrcHeader()
 	versionText.setPosition(-15, -40);
 	versionText.setBlurGlowColor(5.0f, glm::vec4(0.0, 0.0, 0.0f, 1.0f));
 	versionText.setAlignment(ALIGN_RIGHT | ALIGN_TOP);
-	versionText.setTextf("%s (Aroma)", WUP_GX2_VERSION);
+	versionText.setTextf("%s (Aroma)", BARIISTA_VERSION);
 	
 	headerFrame.setSize(titleImg.getWidth(), titleImg.getHeight());
 	headerFrame.setPosition(0, 310);
