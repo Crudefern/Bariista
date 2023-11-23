@@ -14,7 +14,7 @@ void log_init()
     WHBLogUdpInit();
 }
 
-void log_deinit(void)
+void log_deinit()
 {
     WHBLogUdpDeinit();
 }

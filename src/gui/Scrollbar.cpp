@@ -165,12 +165,12 @@ void Scrollbar::OnDownButtonClick(GuiButton *button, const GuiController *contro
 
 void Scrollbar::OnBoxButtonHold(GuiButton *button, const GuiController *controller, GuiTrigger *trigger)
 {
-    if(EntrieCount == 0)
+    if(EntrieCount == 0) {
         return;
-
-	if(!controller->data.validPointer)
+	}
+	if(!controller->data.validPointer) {
 		return;
-
+	}
 	int y = controller->data.y - this->getCenterY();
 
 	int positionWiimote = LIMIT(y - MinHeight, 0, MaxHeight - MinHeight);

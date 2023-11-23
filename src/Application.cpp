@@ -74,9 +74,9 @@ Application::~Application()
 {
 	delete bgMusic;
 	
-	for(int i = 0; i < 5; i++)
+	for(int i = 0; i < 5; i++) {
 		delete controller[i];
-	
+	}
 	AsyncDeleter::destroyInstance();
 	GuiImageAsync::threadExit();
 	Resources::Clear();

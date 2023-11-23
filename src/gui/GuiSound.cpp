@@ -63,9 +63,9 @@ bool GuiSound::Load(const char * filepath)
         }
     }
 
-    if(voice < 0)
+    if(voice < 0) {
         return false;
-
+    }
 	return true;
 }
 
@@ -97,9 +97,9 @@ bool GuiSound::Load(const u8 * snd, s32 len)
         }
     }
 
-    if(voice < 0)
+    if(voice < 0) {
         return false;
-
+    }
 	return true;
 }
 
@@ -160,9 +160,9 @@ void GuiSound::Resume()
 bool GuiSound::IsPlaying()
 {
     Voice * v = SoundHandler::instance()->getVoice(voice);
-    if(v)
+    if(v) {
         return v->getState() == Voice::STATE_PLAYING;
-
+    }
 	return false;
 
 }

@@ -159,9 +159,9 @@ void GuiImageAsync::threadInit()
 
 void GuiImageAsync::threadExit()
 {
-    if(threadRefCounter)
+    if(threadRefCounter) {
         --threadRefCounter;
-
+    }
 	if(/*(threadRefCounter == 0) &&*/ (pThread != NULL))
 	{
 	    bExitRequested = true;
