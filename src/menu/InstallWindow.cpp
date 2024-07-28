@@ -61,7 +61,7 @@ InstallWindow::InstallWindow(CFolderList * list)
 	{
 		messageBox = new MessageBox(MessageBox::BT_OK, MessageBox::IT_ICONEXCLAMATION, false);
 		messageBox->setTitle("No content selected.");
-		messageBox->setMessage1("Return to folder browser.");
+		messageBox->setMessage1("Returning to content selector.");
 		messageBox->messageOkClicked.connect(this, &InstallWindow::OnCloseWindow);
 	}
 	
@@ -86,7 +86,7 @@ void InstallWindow::OnValidInstallClick(GuiElement * element, int val)
 {
 	messageBox->messageYesClicked.disconnect(this);
 	messageBox->messageNoClicked.disconnect(this);
-	messageBox->reload("Where do you want to install?", "", "", MessageBox::BT_DEST, MessageBox::IT_ICONQUESTION);
+	messageBox->reload("Do you want to install to internal storage or USB", "", "", MessageBox::BT_DEST, MessageBox::IT_ICONQUESTION);
 	messageBox->messageYesClicked.connect(this, &InstallWindow::OnDestinationChoice);
 	messageBox->messageNoClicked.connect(this, &InstallWindow::OnDestinationChoice);
 }
@@ -207,7 +207,7 @@ void InstallWindow::InstallProcess(int pos, int total)
 			if(res != 0)
 			{
 				//__os_snprintf(errorText1, sizeof(errorText1), "Error: MCP_InstallGetInfo 0x%08X", MCP_GetLastRawError());
-				messageBox->reload(installFolder, gameName, "Confirm complete WUP files are in the folder.", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
+				messageBox->reload(installFolder, gameName, "Make sure you got all of the WUP files", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
 				result = -3;
 				break;
 			}
@@ -302,15 +302,15 @@ void InstallWindow::InstallProcess(int pos, int total)
 					{
 						//__os_snprintf(errorText1, sizeof(errorText1), "Error: install error code 0x%08X", installError);
 						if (installError == 0xFFFBF446 || installError == 0xFFFBF43F)
-							messageBox->reload("Install failed", gameName, "Possible missing or bad title.tik file", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
+							messageBox->reload("Install failed", gameName, "title.tik may be bad or missing", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
 						else if (installError == 0xFFFBF441)
-							messageBox->reload("Install failed", gameName, "Possible incorrect console for DLC title.tik file", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
+							messageBox->reload("Install failed", gameName, "This might be the wrong console for this DLC", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
 						else if (installError == 0xFFFCFFE4)
-							messageBox->reload("Install failed", gameName, "Possible not enough memory on target device", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
+							messageBox->reload("Install failed", gameName, "Possibly out of space on install destination", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
 						else if (installError == 0xFFFFF825)
-							messageBox->reload("Install failed", gameName, "Possible bad SD card.  Reformat (32k blocks) or replace", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
+							messageBox->reload("Install failed", gameName, "SD card might be bad, reformat with 32k clusters or replace", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
 						else if ((installError & 0xFFFF0000) == 0xFFFB0000)
-							messageBox->reload("Install failed", gameName, "Verify WUP files are correct & complete. DLC/E-shop require Sig Patch", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
+							messageBox->reload("Install failed", gameName, "Verify WUP files are correct & complete. VC injects require sigpatches", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
 						
 						result = -9;
 					}
@@ -318,7 +318,7 @@ void InstallWindow::InstallProcess(int pos, int total)
 			}
 			else
 			{
-				messageBox->reload("Install failed", gameName, "Not a game, game update, DLC, demo or version title", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
+				messageBox->reload("Install failed", gameName, "Not a valid title containing a game, game update, DLC, demo, or version", MessageBox::BT_OK, MessageBox::IT_ICONERROR);
 				result = -4;
 			}
 		}

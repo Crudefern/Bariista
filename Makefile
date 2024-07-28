@@ -47,7 +47,17 @@ DATA			:= data	\
 						 data/images \
 						 data/fonts \
 						 data/sounds
-INCLUDES		:= src
+INCLUDES		:= include \
+						include/common \
+						include/fs \
+						include/gui \
+						include/menu \
+						include/resources \
+						include/sounds \
+						include/system \
+						include/utils \
+						include/video \
+						include/video/shaders
 CONTENT			:= 
 ICON			:= meta/icon.png
 TV_SPLASH		:= meta/tv-splash.png

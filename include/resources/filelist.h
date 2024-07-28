@@ -27,9 +27,9 @@ typedef struct _RecourceFile
 #include "exclamationIcon_png.h"
 #include "font_ttf.h"
 #include "informationIcon_png.h"
+#include "messageBox_png.h"
 #include "messageBoxButton_png.h"
 #include "messageBoxButtonSelected_png.h"
-#include "messageBox_png.h"
 #include "minus_png.h"
 #include "player1_point_png.h"
 #include "player2_point_png.h"
@@ -59,9 +59,9 @@ static RecourceFile RecourceList[] =
 	{"exclamationIcon.png", exclamationIcon_png, exclamationIcon_png_size, NULL, 0},
 	{"font.ttf", font_ttf, font_ttf_size, NULL, 0},
 	{"informationIcon.png", informationIcon_png, informationIcon_png_size, NULL, 0},
+	{"messageBox.png", messageBox_png, messageBox_png_size, NULL, 0},
 	{"messageBoxButton.png", messageBoxButton_png, messageBoxButton_png_size, NULL, 0},
 	{"messageBoxButtonSelected.png", messageBoxButtonSelected_png, messageBoxButtonSelected_png_size, NULL, 0},
-	{"messageBox.png", messageBox_png, messageBox_png_size, NULL, 0},
 	{"minus.png", minus_png, minus_png_size, NULL, 0},
 	{"player1_point.png", player1_point_png, player1_point_png_size, NULL, 0},
 	{"player2_point.png", player2_point_png, player2_point_png_size, NULL, 0},
